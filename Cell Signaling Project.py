@@ -1,4 +1,28 @@
-def cellSignaling(signalingMolecule):
+print(f'Choose a signaling molecule:')
+print(f'1. Steroid Hormone')
+print(f'2. Peptide Hormone')
+choice = input(f'Enter 1 for Steriod Hormone or 2 for Peptide Hormone: ')
+if choice == 1: 
+    signalingMolecule = ['small', 'nonpolar', 'hydrophobic']
+elif choice == 2:
+    signalingMolecule = ['large', 'polar', 'hydrophilic']
+    print(f'Choose a receptor type:')
+    print(f'1. GProtein')
+    print(f'2. Ligand')
+    receptor_choice = input(f'Enter 1 for GProtein or 2 for Ligand: ')
+    if receptor_choice == 1:
+        receptorType = 'GProtein'
+    elif receptor_choice == 2:
+        receptorType = 'Ligand'
+    else:
+        print(f'Invalid recepetor choice! Please restart the program and enter 1 or 2.')
+        exit()
+else: 
+    print(f'Invalid choice! Please restart the program and enter 1 or 2.')
+    exit()
+
+
+def cellSignaling(signalingMolecule, receptorType=None):
     steroidHormone = ["small", "nonpolar", "hydrophobic"] 
     peptideHormone = ["large", "polar", "hydrophilic"] #lists are characteristics from notes
 #Reception
